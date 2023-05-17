@@ -43,10 +43,10 @@
                             <path d="M11 7V13H15.5" stroke="white" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <p class="header-top-working-time__text">
+                        <div class="header-top-working-time__text">
                             Monday to Saturday :
-                        </p>
-                        <p class="header-top-working-time__text">
+                        </div>
+                        <div class="header-top-working-time__text">
                             <span>
                                 9am
                             </span>
@@ -54,20 +54,22 @@
                             <span>
                                 7pm
                             </span>
-                        </p>
+                        </div>
                     </div>
-                    <a class="header-top__entrance" href="#">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M12 16L16 12L12 8" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M8 12H16" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        Login or Register
-                    </a>
+                    <div class="header-top__entrance">
+                        <a class="header-top__entrance-link" href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 16L16 12L12 8" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8 12H16" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Login or Register
+                        </a>
+                    </div>
                     <div class="header-top__socials">
                         <a class="header-top__socials-link" href="#">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -319,12 +321,18 @@
                         blog grid view
                     </h1>
                     <div class="section-top__breadcrumbs breadcrumbs">
-                        <a class="breadcrumbs__link" href="#">
-                            Home
-                        </a>
-                        <a class="breadcrumbs__link" href="#">
-                            Blog Grid View
-                        </a>
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__list-item">
+                                <a class="breadcrumbs__list-link" href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__list-item">
+                                <a class="breadcrumbs__list-link" href="#">
+                                    Blog Grid View
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -332,32 +340,36 @@
                 <div class="container">
                     <div class="blog-grid__inner">
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-1.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-1.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
+                            <h2 class="blog-grid-item__title">
+                                <a class="blog-grid-item__title-link" href="#">
+                                    modi quae consequatur nostrum
+                                    et obcaecati voluptatem.
+                                </a>
+                            </h2>
+                            <div class="blog-grid-item__text">
                                 Varius sedu. Magna sollicitud volutpat nim
                                 quis. Sed sit leoys quis nibh...
-                            </a>
+                            </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -365,32 +377,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-2.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-2.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -398,32 +414,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-3.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-3.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -431,32 +451,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-4.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-4.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -464,32 +488,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-5.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-5.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -497,32 +525,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-6.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-6.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -530,32 +562,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-7.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-7.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                 <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -563,32 +599,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-8.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-8.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -596,32 +636,36 @@
                         </div>
                         </div>
                         <div class="blog-grid__item blog-grid-item">
-                            <a class="blog-grid-item__box blog-grid-item-box" href="#">
-                                <div class="blog-grid-item-box__img">
-                                    <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-9.jpg"
-                                        alt="img">
-                                </div>
-                                <p class="blog-grid-item-box__text">
-                                    <span>25</span>
-                                    <span>OCT</span>
-                                </p>
-                            </a>
+                            <div class="blog-grid-item__wrapper">
+                                <a class="blog-grid-item__box blog-grid-item-box" href="#">
+                                    <div class="blog-grid-item-box__img">
+                                        <img class="blog-grid-item-box__img-image" src="images/blog-grid-img-9.jpg"
+                                            alt="img">
+                                    </div>
+                                    <p class="blog-grid-item-box__text">
+                                        <span>25</span>
+                                        <span>OCT</span>
+                                    </p>
+                                </a>
+                            </div>
                             <div class="blog-grid-item__inner">
-                            <a class="blog-grid-item__title" href="#">
-                                modi quae consequatur nostrum
-                                et obcaecati voluptatem.
-                            </a>
-                            <a class="blog-grid-item__text" href="#">
-                                Varius sedu. Magna sollicitud volutpat nim
-                                quis. Sed sit leoys quis nibh...
-                            </a>
+                                <h2 class="blog-grid-item__title">
+                                    <a class="blog-grid-item__title-link" href="#">
+                                        modi quae consequatur nostrum
+                                        et obcaecati voluptatem.
+                                    </a>
+                                </h2>
+                                <div class="blog-grid-item__text">
+                                    Varius sedu. Magna sollicitud volutpat nim
+                                    quis. Sed sit leoys quis nibh...
+                                </div>
                             <div class="blog-grid-item__bottom">
                                 <span>
 
                                 </span>
-                                <p class="blog-grid-item__bottom-text">
+                                <div class="blog-grid-item__bottom-text">
                                     By John Deo
-                                </p>
+                                </div>
                                 <a class="blog-grid-item__bottom-link" href="#">
                                     2 Comments
                                 </a>
@@ -629,26 +673,34 @@
                         </div>
                         </div>
                     </div>
-                    <div class="blog-grid__links">
-                        <a class="blog-grid__links-link blog-grid__links-link--active" href="#">
-                            1
-                        </a>
-                        <a class="blog-grid__links-link" href="#">
-                            2
-                        </a>
-                        <a class="blog-grid__links-link" href="#">
-                            3
-                        </a>
-                        <a class="blog-grid__links-link" href="#">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.75 9H14.25" stroke="#515151" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 3.75L14.25 9L9 14.25" stroke="#515151" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
+                    <ol class="blog-grid__page-buttons page-buttons">
+                        <li class="page-buttons__item">
+                            <a class="page-buttons__link page-buttons__link--active" href="#">
+                                1
+                            </a>
+                        </li>
+                        <li class="page-buttons__item">
+                            <a class="page-buttons__link" href="#">
+                                2
+                            </a>
+                        </li>
+                        <li class="page-buttons__item">
+                            <a class="page-buttons__link" href="#">
+                                3
+                            </a>
+                        </li>
+                        <li class="page-buttons__item">
+                            <a class="page-buttons__link" href="#">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.75 9H14.25" stroke="#515151" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M9 3.75L14.25 9L9 14.25" stroke="#515151" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ol>
                 </div>
             </section>
             <section class="main__subscribe subscribe">
@@ -658,12 +710,12 @@
                             <p class="subscribe__box-text">
                                 affordable & Easy Rental Services
                             </p>
-                            <h2 class="subscribe__title">
+                            <h3 class="subscribe__title">
                                 subscribe
                                 <span>
                                     newsletter
                                 </span>
-                            </h2>
+                            </h3>
                         </div>
                         <form class="subscribe__form" action="#">
                             <input class="subscribe__form-input" type="text" placeholder="Enter your email...">
@@ -686,9 +738,9 @@
         </main>
         <footer class="footer">
             <div class="big-container">
-                <a class="footer__support" href="tel:8002360011">
+                <p class="footer__support">
                     Get Support (800) 236 0011
-                </a>
+                </p>
             </div>
             <div class="footer__content footer-content">
                 <div class="footer-container">
