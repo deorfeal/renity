@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
 </head>
 
 <body>
@@ -421,53 +422,528 @@
                     </div>
                 </div>
             </form>
-            <div class="main__sort sort">
-                <div class="container">
-                    <form class="sort__form sort-form" action="#">
-                        <div class="sort-form__info">
-                            <p class="sort-form__info-text">
-                                <span>
-                                    350
-                                </span>
-                                results.
-                                Showing
-                                <span>
-                                    5
-                                </span>
-                                of
-                                <span>
-                                    21
-                                </span>
-                                of total.
-                            </p>
-                        </div>
-                        <div class="sort-form__box">
-                            <div class="sort-form__box-text">
-                                Sort By
+            <div class="main__catalog-list catalog-list">
+                <div class="biggest-container">
+                    <div class="catalog-list__inner">
+                        <aside class="catalog-list__aside catalog-list-aside">
+                            <form class="catalog-list-aside__form catalog-list-aside-form" action="#">
+                                <div class="catalog-list-aside-form__range">
+                                    <h3 class="catalog-list-aside-form__range-title">
+                                        price range
+                                    </h3>
+                                    <div class="catalog-list-aside-form__range-slider" id="slider"></div>
+                                    <div class="catalog-list-aside-form__range-values" id="slider-values"></div>
+                                </div>
+                                <div class="catalog-list-aside-form__range">
+                                    <h3 class="catalog-list-aside-form__range-title">
+                                        Manufacture Year
+                                    </h3>
+                                    <div class="catalog-list-aside-form__range-slider" id="slider-second"></div>
+                                    <div class="catalog-list-aside-form__range-values" id="slider-values-second"></div>
+                                </div>
+                                <div class="catalog-list-aside-form__categories">
+                                    <h3 class="catalog-list-aside-form__categories-title">
+                                        categories
+                                    </h3>
+                                    <div class="catalog-list-aside-form__categories-inner">
+                                        <label class="container">
+                                            Audio & Video
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">
+                                            Lights & Lazers
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">
+                                            Cameras & Projectors
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">
+                                            Electrical
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">
+                                            Stage & Rigging
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">
+                                            Wireless Accessories
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="catalog-list-aside-form__btn btn" type="button">
+                                    <span>
+                                        <svg width="20" height="20" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.75 9H14.25" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        apply filters
+                                    </span>
+                                </button>
+                            </form>
+                        </aside>
+                        <div class="catalog-list__content catalog-list-content">
+                            <div class="catalog-list-content__sort sort">
+                                <form class="sort__form sort-form" action="#">
+                                    <div class="sort-form__info">
+                                        <p class="sort-form__info-text">
+                                            <span>
+                                                350
+                                            </span>
+                                            results.
+                                            Showing
+                                            <span>
+                                                5
+                                            </span>
+                                            of
+                                            <span>
+                                                21
+                                            </span>
+                                            of total.
+                                        </p>
+                                    </div>
+                                    <div class="sort-form__box">
+                                        <div class="sort-form__box-text">
+                                            Sort By
+                                        </div>
+                                        <button class="sort-form__box-btn" type="button">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 3H3V10H10V3Z" stroke="#EC6C23" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 3H14V10H21V3Z" stroke="#EC6C23" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M21 14H14V21H21V14Z" stroke="#EC6C23" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10 14H3V21H10V14Z" stroke="#EC6C23" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="sort-form__box-btn" type="button">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.66667 4.33329H22.75V6.49996H8.66667V4.33329ZM3.25 3.79163H6.5V7.04163H3.25V3.79163ZM3.25 11.375H6.5V14.625H3.25V11.375ZM3.25 18.9583H6.5V22.2083H3.25V18.9583ZM8.66667 11.9166H22.75V14.0833H8.66667V11.9166ZM8.66667 19.5H22.75V21.6666H8.66667V19.5Z"
+                                                    fill="#515151" fill-opacity="0.4" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
-                            <button class="sort-form__box-btn" type="button">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 3H3V10H10V3Z" stroke="#EC6C23" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M21 3H14V10H21V3Z" stroke="#EC6C23" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M21 14H14V21H21V14Z" stroke="#EC6C23" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M10 14H3V21H10V14Z" stroke="#EC6C23" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                            <button class="sort-form__box-btn" type="button">
-                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.66667 4.33329H22.75V6.49996H8.66667V4.33329ZM3.25 3.79163H6.5V7.04163H3.25V3.79163ZM3.25 11.375H6.5V14.625H3.25V11.375ZM3.25 18.9583H6.5V22.2083H3.25V18.9583ZM8.66667 11.9166H22.75V14.0833H8.66667V11.9166ZM8.66667 19.5H22.75V21.6666H8.66667V19.5Z"
-                                        fill="#515151" fill-opacity="0.4" />
-                                </svg>
-                            </button>
+                            <div class="catalog-list-content__item catalog-list-content-item">
+                                <div class="catalog-list-content-item__img">
+                                    <img class="catalog-list-content-item__img-image"
+                                        src="images/catalog-list-content-img-1.webp" alt="#">
+                                </div>
+                                <div class="catalog-list-content-item__body catalog-list-content-item-body">
+                                    <div class="catalog-list-content-item-body__top catalog-list-content-item-body-top">
+                                        <h2 class="catalog-list-content-item-body-top__title">
+                                            ZWC quality HD Headphones
+                                        </h2>
+                                        <div
+                                            class="catalog-list-content-item-body-top__box catalog-list-content-item-body-top-box">
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Day
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $170.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Week
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $480.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Month
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $790.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="catalog-list-content-item-body__bottom catalog-list-content-item-body-bottom">
+                                        <p class="catalog-list-content-item-body-bottom__text">
+                                            Cursus ullamcorper ultricies amet imperdiet amet ...
+                                        </p>
+                                        <ul class="catalog-list-content-item-body-bottom__list">
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Freq Range: 5 - 3000Hz
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Sensitivity: 104 dB
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Output BT Specs: Class 2
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Max Input Power: 20 mW
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalog-list-content-item__info catalog-list-content-item-info">
+                                    <div class="catalog-list-content-item-info__box">
+                                        <p class="catalog-list-content-item-info__box-text">
+                                            total rental price
+                                            Inc. Tax
+                                        </p>
+                                        <div class="catalog-list-content-item-info__box-price">
+                                            $1,395.00
+                                        </div>
+                                    </div>
+                                    <a class="catalog-list-content-item-info__btn btn" href="#">
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.75 9H14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            book now
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-list-content__item catalog-list-content-item">
+                                <div class="catalog-list-content-item__img">
+                                    <img class="catalog-list-content-item__img-image"
+                                        src="images/catalog-list-content-img-2.webp" alt="#">
+                                </div>
+                                <div class="catalog-list-content-item__body catalog-list-content-item-body">
+                                    <div class="catalog-list-content-item-body__top catalog-list-content-item-body-top">
+                                        <h2 class="catalog-list-content-item-body-top__title">
+                                            disco lights with Remote Control
+                                        </h2>
+                                        <div
+                                            class="catalog-list-content-item-body-top__box catalog-list-content-item-body-top-box">
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Day
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $170.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Week
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $480.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Month
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $790.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="catalog-list-content-item-body__bottom catalog-list-content-item-body-bottom">
+                                        <p class="catalog-list-content-item-body-bottom__text">
+                                            Cursus ullamcorper ultricies amet imperdiet amet ...
+                                        </p>
+                                        <ul class="catalog-list-content-item-body-bottom__list">
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Freq Range: 5 - 3000Hz
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Sensitivity: 104 dB
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Output BT Specs: Class 2
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Max Input Power: 20 mW
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalog-list-content-item__info catalog-list-content-item-info">
+                                    <div class="catalog-list-content-item-info__box">
+                                        <p class="catalog-list-content-item-info__box-text">
+                                            total rental price
+                                            Inc. Tax
+                                        </p>
+                                        <div class="catalog-list-content-item-info__box-price">
+                                            $1,395.00
+                                        </div>
+                                    </div>
+                                    <a class="catalog-list-content-item-info__btn btn" href="#">
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.75 9H14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            book now
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-list-content__item catalog-list-content-item">
+                                <div class="catalog-list-content-item__img">
+                                    <img class="catalog-list-content-item__img-image"
+                                        src="images/catalog-list-content-img-3.webp" alt="#">
+                                </div>
+                                <div class="catalog-list-content-item__body catalog-list-content-item-body">
+                                    <div class="catalog-list-content-item-body__top catalog-list-content-item-body-top">
+                                        <h2 class="catalog-list-content-item-body-top__title">
+                                            DJ’s 07 channel console
+                                        </h2>
+                                        <div
+                                            class="catalog-list-content-item-body-top__box catalog-list-content-item-body-top-box">
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Day
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $170.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Week
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $480.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Month
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $790.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="catalog-list-content-item-body__bottom catalog-list-content-item-body-bottom">
+                                        <p class="catalog-list-content-item-body-bottom__text">
+                                            Cursus ullamcorper ultricies amet imperdiet amet ...
+                                        </p>
+                                        <ul class="catalog-list-content-item-body-bottom__list">
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Freq Range: 5 - 3000Hz
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Sensitivity: 104 dB
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Output BT Specs: Class 2
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Max Input Power: 20 mW
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalog-list-content-item__info catalog-list-content-item-info">
+                                    <div class="catalog-list-content-item-info__box">
+                                        <p class="catalog-list-content-item-info__box-text">
+                                            total rental price
+                                            Inc. Tax
+                                        </p>
+                                        <div class="catalog-list-content-item-info__box-price">
+                                            $1,395.00
+                                        </div>
+                                    </div>
+                                    <a class="catalog-list-content-item-info__btn btn" href="#">
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.75 9H14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            book now
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-list-content__item catalog-list-content-item">
+                                <div class="catalog-list-content-item__img">
+                                    <img class="catalog-list-content-item__img-image"
+                                        src="images/catalog-list-content-img-4.webp" alt="#">
+                                </div>
+                                <div class="catalog-list-content-item__body catalog-list-content-item-body">
+                                    <div class="catalog-list-content-item-body__top catalog-list-content-item-body-top">
+                                        <h2 class="catalog-list-content-item-body-top__title">
+                                            two Channel Mini Speakers
+                                        </h2>
+                                        <div
+                                            class="catalog-list-content-item-body-top__box catalog-list-content-item-body-top-box">
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Day
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $170.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Week
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $480.00
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-content-item-body-top-box__inner">
+                                                <div class="catalog-list-content-item-body-top-box__text">
+                                                    Rent Per Month
+                                                </div>
+                                                <div class="catalog-list-content-item-body-top-box__price">
+                                                    $790.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="catalog-list-content-item-body__bottom catalog-list-content-item-body-bottom">
+                                        <p class="catalog-list-content-item-body-bottom__text">
+                                            Cursus ullamcorper ultricies amet imperdiet amet ...
+                                        </p>
+                                        <ul class="catalog-list-content-item-body-bottom__list">
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Freq Range: 5 - 3000Hz
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Sensitivity: 104 dB
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Output BT Specs: Class 2
+                                                </p>
+                                            </li>
+                                            <li class="catalog-list-content-item-body-bottom__list-item">
+                                                <p class="catalog-list-content-item-body-bottom__list-text">
+                                                    Max Input Power: 20 mW
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalog-list-content-item__info catalog-list-content-item-info">
+                                    <div class="catalog-list-content-item-info__box">
+                                        <p class="catalog-list-content-item-info__box-text">
+                                            total rental price
+                                            Inc. Tax
+                                        </p>
+                                        <div class="catalog-list-content-item-info__box-price">
+                                            $1,395.00
+                                        </div>
+                                    </div>
+                                    <a class="catalog-list-content-item-info__btn btn" href="#">
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.75 9H14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            book now
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <ol class="catalog-list-content__page-buttons page-buttons">
+                                <li class="page-buttons__item">
+                                    <a class="page-buttons__link page-buttons__link--active" href="#">
+                                        1
+                                    </a>
+                                </li>
+                                <li class="page-buttons__item">
+                                    <a class="page-buttons__link" href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li class="page-buttons__item">
+                                    <a class="page-buttons__link" href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li class="page-buttons__item">
+                                    <a class="page-buttons__link" href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.75 9H14.25" stroke="#515151" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9 3.75L14.25 9L9 14.25" stroke="#515151" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ol>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             <section class="main__subscribe subscribe">
@@ -670,6 +1146,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
